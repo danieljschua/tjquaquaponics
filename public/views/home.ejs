@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>🌱quaquaponics!</title>
+    <meta property="og:image" content="assets/img/leaf.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ADLaM+Display&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-icons.css">
 </head>
 
@@ -17,7 +19,7 @@
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <nav class="navbar navbar-expand-md bg-body py-3" style="height: 250px;">
+                <nav class="navbar navbar-expand-md bg-body d-lg-flex justify-content-lg-center align-items-lg-center py-3" style="height: 150px;">
                     <div class="container"><a class="navbar-brand d-flex flex-column align-items-center flex-sm-row flex-md-row" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon" style="background: rgb(10,105,14);font-size: 40px;width: 60px;height: 60px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-plant">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path d="M7 15h10v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-4z"></path>
@@ -35,6 +37,19 @@
                         <div class="d-none d-md-block"></div>
                     </div>
                 </nav>
+                <section class="py-4 py-xl-5" style="background: var(--bs-body-bg);">
+                    <div class="container">
+                        <div class="row g-0 d-flex flex-column flex-xl-row justify-content-xxl-center shadow" style="background: rgb(209,235,210);border-radius: 50px;/*box-shadow: 9px 9px var(--bs-emphasis-color);*/">
+                            <div class="col">
+                                <div class="text-white p-4 p-md-5">
+                                    <h2 class="fw-bold mb-3" style="color: var(--bs-emphasis-color);text-align: center;font-weight: bold;font-family: 'ADLaM Display', serif;">We're adding hydroponics to the TJ Greenhouse.&nbsp;</h2>
+                                    <p class="mb-4" style="font-size: 20px;color: var(--bs-emphasis-color);font-family: Montserrat, sans-serif;"><br>In our exciting hydroponics senior research project, we're tackling the global challenge of feeding a growing population using automated greenhouses—a sustainable and efficient solution. Embracing aquaponics, a subset of hydroponics, we're integrating tilapia-raised nutrient-rich water with a remote-controlled system powered by Raspberry Pis. Our goal is not just to grow leafy greens but to revolutionize aquaponic systems with web server technology (this website 😉), enabling real-time monitoring, automation, and data analytics for a more eco-friendly and scalable future in urban agriculture.<br><br></p>
+                                </div>
+                            </div>
+                            <div class="col col-xl-4" style="margin: auto;/*padding-right: 20px;*/max-height: 600px;"><img src="assets/img/daniel-gif.gif" style="width: 100%;/*height: 100%;*//*max-height: 500px;*/border-radius: 50px;object-fit: cover;" width="546" height="600"></div>
+                        </div>
+                    </div>
+                </section>
                 <div class="row" style="margin-left: 0;margin-right: 0;padding-left: 10%;padding-right: 10%;border-color: rgb(150,133,133);background: var(--bs-body-bg);">
                     <div class="col-md-6 col-xl-3 mb-4">
                         <div class="card shadow border-start-primary py-2" style="background: rgb(209,235,210);border-radius: 30px;">
@@ -50,12 +65,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card shadow border-start-primary py-2" style="background: rgb(209,235,210);border-radius: 30px;">
+                        <div class="card border-start-primary py-2 shadow" style="background: rgb(209,235,210);border-radius: 20px;">
                             <div class="card-body">
                                 <div class="row d-flex flex-column-reverse align-items-center no-gutters">
                                     <div class="col me-2">
                                         <div class="text-uppercase text-center text-primary fw-bold text-xs mb-1"><span style="font-size: 22px;color: var(--bs-emphasis-color);font-family: 'ADLaM Display', serif;">Outside Temp</span></div>
-                                        <div class="text-center text-dark fw-bold h5 mb-0"><span style="font-size: 22px;">70 F</span></div>
+                                        <div class="text-center text-dark fw-bold h5 mb-0"><span style="font-size: 22px;"> <%= hourly[0].temperature %> &#x2109 </span></div>
                                     </div>
                                     <div class="col-auto"><i class="fas fa-thermometer-half" style="color: rgb(10,105,14);font-size: 32px;"></i></div>
                                 </div>
