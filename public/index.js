@@ -37,15 +37,10 @@ app.get('/', function (req, res) {
           try {
               console.log("processed_raw_data2.properties.elevation" + processed_raw_data2.properties.elevation)
               var obj = {
-                  elevation: processed_raw_data2.properties.elevation,
                   hourly: processed_raw_data2.properties.periods,
-                //   daily: res.locals.dailyWeatherList,
-                //   city: res.locals.city,
-                //   state: res.locals.state,
                   date: "",
                   dailyStart: 0,
               };
-              console.log("this obj:" + obj.elevation)
           } catch (error) {
               res.redirect("https://user.tjhsst.edu/2024apolinen/weather/form?error=something+really+bad+went+wrong");
               return;
@@ -57,6 +52,8 @@ app.get('/', function (req, res) {
           var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
           var yyyy = today.getFullYear();
           obj.date = mm + '/' + dd + '/' + yyyy;
+          
+          obj.waterDepth = Math.floor(Math.random() * 100); 
           
           console.log("--------------"); 
           res.render('home', obj);
@@ -70,6 +67,20 @@ app.get('/', function (req, res) {
     //  res.render('home')
 })
 
+app.get('/update', function (req, res) {
+    console.log("im getting an update")
+   res.send('Hello World')
+})
+
+app.get('/on', function (req, res) {
+   console.log("im turning on")
+   res.send('turning on')
+})
+
+app.get('/off', function (req, res) {
+    console.log("im turning off")
+   res.send('turning off')
+})
 
 
 // -------------- listener -------------- //
