@@ -57,7 +57,7 @@
                                 <div class="row d-flex flex-column-reverse align-items-center no-gutters">
                                     <div class="col me-2">
                                         <div class="text-uppercase text-primary fw-bold text-xs mb-1" style="text-align: center;"><span style="font-size: 22px;color: var(--bs-emphasis-color);font-family: 'ADLaM Display', serif;">Inside Temp</span></div>
-                                        <div class="text-dark fw-bold h5 mb-0" style="text-align: center;"><span style="font-size: 22px;">70 F</span></div>
+                                        <div class="text-dark fw-bold h5 mb-0" style="text-align: center;"><span style="font-size: 22px;"><%= temp %> C</span></div>
                                     </div>
                                     <div class="col-auto"><i class="fas fa-thermometer-half" style="color: rgb(10,105,14);font-size: 32px;"></i></div>
                                 </div>
@@ -180,6 +180,17 @@
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script>
+        const socket = new WebSocket('wss://quaquaponics.sites.tjhsst.edu');
+        socket.addEventListener('open', function (event) {
+            console.log('DEBUG (home.ejs): Successful web socket connection');
+        });
+        
+        // FOR LATER: when posting updates from Raspberry Pi to website
+        // socket.addEventListener('message', async function (message) {
+        //     console.log(message.data);
+        // })
+    </script>
 </body>
 
 </html>
